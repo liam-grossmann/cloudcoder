@@ -1,0 +1,46 @@
+<filter-criteria-builder 
+	[filterProperties]="bondProperties"
+	(filterPredicatesChanged)="onFilterPredicatesChanged($event);">
+</filter-criteria-builder>
+<div>
+
+	<div class="text-right">Displaying {{filteredBondList.length}} of {{bondList.length}} records.</div>
+	
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th class="col-md-2">Isin</th>
+				<th class="col-md-2">Name</th>
+				<th class="col-md-1 text-center">Clean Price</th>
+				<th class="col-md-1 text-center">Dirty Price</th>
+				<th class="col-md-1 text-center">Interest</th>
+				<th class="col-md-1 text-center">Yield</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr *ngFor="let bond of currentPageList">
+				<td>{{bond.isin}}</td>
+				<td>{{bond.name}}</td>
+				<td class="text-right">{{bond.cleanPrice | number:'1.2-2'}}</td>
+				<td class="text-right">{{bond.dirtyPrice | number:'1.2-2'}}</td>
+				<td class="text-right">{{bond.interest | number:'1.6-6'}}</td>
+				<td class="text-right">{{bond.bondYield | number:'1.6-6'}}</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<div *ngIf="filteredBondList.length > 10">
+		<bootstrap-pagination 
+			[totalNumberOfItems]="totalNumberOfRecords" 
+			[itemsPerPage]="numberOfRecordsPerPage" 
+			[currentPageNumber]="currentPageNumber" 
+			(onPageChanged)="onPageChanged($event)">
+		</bootstrap-pagination>
+	</div>
+
+
+	<div style="margin-bottom: 300px" *ngIf="filteredBondList.length < 10">
+		&nbsp;
+	</div>
+
+</div>

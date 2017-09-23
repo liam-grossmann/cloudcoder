@@ -1,0 +1,36 @@
+<div>
+    <span *ngIf="filterPredicates.length === 0">Results not filtered</span>
+    <span *ngIf="filterPredicates.length > 0">
+        <span>Showing results where</span>
+        <span *ngFor="let filterPredicate of filterPredicates; let i = index">
+            <span id="trigger">
+                <a id="gif" (click)="doRemoveFilterPredicate(filterPredicate)">
+                    {{filterPredicate}}
+                    <i style="font-size: .8em;" class="fa fa-remove"></i>
+                </a>
+            </span>
+            <span *ngIf="filterPredicates.length > i + 1"> and </span>
+        </span>
+    </span>
+</div>
+
+<div style="margin-bottom: -10px">
+    <select [(ngModel)]="selectedFilterProperty" (change)="onFilterPropertySelected()">
+        <option *ngFor="let filterProperty of filterProperties" [ngValue]="filterProperty">
+          {{filterProperty.name}}
+        </option>
+    </select>
+    <span *ngIf="selectedFilterProperty">
+        <select [(ngModel)]="selectedOperator">
+            <option *ngFor="let operator of operators" [ngValue]="operator">
+                {{operator}}
+            </option>
+        </select>
+        <span *ngIf="selectedOperator">
+            <input type="text" [(ngModel)]="filterValue" (keypress)="onValueTextBoxKeyPress(($event))" />
+            <span *ngIf="filterValue">
+                <input type="button" class="btn btn-xs btn-default" (click)="doAddFilterPredicate()" value="Add" />
+            </span>
+        </span>
+    </span>
+</div>

@@ -1,0 +1,115 @@
+@import url(http://fonts.googleapis.com/css?family=News+Cycle:400,700);
+
+#preload {
+  width: 100%;
+  height: 100%;
+  font: 1em "News Cycle", arial, verdana, sans-serif;
+  font-weight: 700;
+  letter-spacing:.15em;
+  color: #ff6;
+  background: #000;
+  overflow: hidden;
+  padding : 0;
+  margin: 0;
+}
+
+.hidden { display: none; }
+
+/* 'A long time ago ...' */
+#introductionText {
+    position: relative;
+    width: 16em;
+    font-size: 200%;
+    font-weight: 400;
+    margin: 20% auto;
+    color: #4ee;
+    z-index: 1;
+}
+
+#logo {
+    position: absolute;
+    width: 5.0em;
+    margin-left: -2.5em;
+    left: 50%;
+    top: 25%;
+    font-size: 10em;
+    opacity: 0;
+}
+
+/* Sets the text to have perspective */
+#titles
+{
+	position: absolute;
+	width: 18em;
+	height: 50em;
+	bottom: 65px;
+	left: 50%;
+	margin-left: -9em;
+	font-size: 350%;
+	text-align: justify;
+	overflow: hidden;   
+    -webkit-transform: perspective(300px) rotateX(25deg);
+	-moz-transform: perspective(300px) rotateX(25deg);
+	-ms-transform: perspective(300px) rotateX(25deg);
+	-o-transform: perspective(300px) rotateX(25deg);
+	transform: perspective(300px) rotateX(25deg);
+	-webkit-transform-origin: 50% 100%;
+	-moz-transform-origin: 50% 100%;
+	-ms-transform-origin: 50% 100%;
+	-o-transform-origin: 50% 100%;
+	transform-origin: 50% 100%;
+}
+
+#titles p
+{
+	text-align: justify;
+	margin: 0.8em 0;
+}
+
+#titles p.center
+{
+	text-align: center;
+}
+
+/* Scrolling text class. Applied only after image fully loads */
+.scrollingText
+{
+	position: absolute;
+	top: 100%;
+	-webkit-animation: scroll 80s linear 5s infinite;
+	-moz-animation: scroll 80s linear 5s infinite;
+	-ms-animation: scroll 80s linear 5s infinite;
+	-o-animation: scroll 80s linear 5s infinite;
+	animation: scroll 80s linear 5s infinite;
+}
+
+/* animation */
+@-webkit-keyframes scroll {
+	0%  { top: 100%; opacity: 1; }
+    95% { opacity: 1; }
+	100% { top: -170%; opacity : 0 }
+}
+
+@-moz-keyframes scroll {
+	0%  { top: 100%; opacity: 1; }
+    95% { opacity: 1; }
+	100% { top: -170%; opacity : 0 }
+}
+
+@-ms-keyframes scroll {
+	0%  { top: 100%; opacity: 1; }
+    95% { opacity: 1; }
+	100% { top: -170%; opacity : 0 }
+}
+
+@-o-keyframes scroll {
+	0%  { top: 100%; opacity: 1; }
+    95% { opacity: 1; }
+	100% { top: -170%; opacity : 0 }
+}
+
+@keyframes scroll {
+	0%  { top: 100%; opacity: 1; }
+    95% { opacity: 1; }
+	100% { top: -170%; opacity : 0 }
+}

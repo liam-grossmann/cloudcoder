@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="starter-template">
+        <h3>Stock Price Simulator (Angular 2.0 and RxJS)</h3>
+        <ul>
+            <li>Select the 'Subscribe' buttons in the grid below to get live prices</li>
+        </ul>
+
+        <button type="button" class="btn btn-xs btn-default" (click)="navigateToPreviousPortfolioItem()">
+            <i class="fa fa-arrow-circle-left"></i>&nbsp;Go to Desktop sample
+        </button>
+        <button type="button" class="btn btn-xs btn-default" (click)="navigateToPortfolioList()">
+            <i class="fa fa-list-alt"></i>&nbsp;Portfolio List
+        </button>
+        <button type="button" class="btn btn-xs btn-default" (click)="navigateToNextPortfolioItem()">
+           Go to Star Wars sample&nbsp;<i class="fa fa-arrow-circle-right"></i>
+        </button>
+    </div>
+
+    <br/>
+    <watch-list></watch-list>
+</div>

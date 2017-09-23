@@ -1,0 +1,115 @@
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+div, button 
+{
+    font-size: 12px;
+}
+
+.table {
+    margin-bottom: -10px;
+}
+
+.table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+    border: 1px solid #000000;
+}
+
+th {
+    border-color: #aaaaaa;
+    background-color: #211F1C;
+    color: #ffffff;
+}
+
+.table-bordered {
+    border-color: grey;
+}
+
+.table>tbody>tr:nth-child(even)>td,
+.table>tbody>tr:nth-child(even)>th {
+    border-color: #000000;
+    background-color: #211F1C;
+    color: #FED700;
+}
+
+.table-striped>tbody>tr:nth-child(odd)>td,
+.table-striped>tbody>tr:nth-child(odd)>th {
+    border-color: #000000;
+    background-color: #000000;
+    color: #FED700;
+}
+
+.datagrid {
+    font-family:"Arial",Helvetica,Arial,sans-serif;
+    font-size:14px;
+    color: #000000;
+}
+
+#filterLabel {
+    color: #ffffff;
+}
+
+#notFilteredLabel {
+    color: #ffffff;
+}
+
+#trigger > a {
+    color: #999;
+    text-decoration: underline;
+}
+
+#trigger > a:hover {
+    color: #000;
+}
+
+#recordCountLabel {
+    color: #ffffff;
+    text-align: right;
+}
+
+.select {
+    height: 50px;
+}
+
+.input {
+    height: 28px;
+}
+
+.instructionsText {
+    margin-left: 10px;
+}
+
+.backText {
+    margin-left: 10px;
+}
+
+a {
+    color: #A0CCE6;
+}
+
+a:hover {
+    color: #999;
+}
+
+#footer {
+    margin-top: 280px;
+    background: #141414;
+    padding: 20px 0;
+    color: #FFF;
+}
+
+#footer p {
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+/* Flatten das boostrap */
+.well, .navbar-inner, .popover, .btn, .tooltip, input, select, textarea, pre, .progress, .modal, .add-on, .alert, .table-bordered, .nav>.active>a, .dropdown-menu, .tooltip-inner, .badge, .label, .img-polaroid {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    -webkit-border-radius: 0px !important;
+    -moz-border-radius: 0px !important;
+    border-radius: 0px !important;
+    border-collapse: collapse !important;
+    background-image: none !important;
+}
+

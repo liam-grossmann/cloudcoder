@@ -1,0 +1,43 @@
+<div class="container">
+    <div class="starter-template">
+        <h3>STAR WARS scrolling text from the 1977 movie</h3>
+        <ul>
+            <li>D3 and CSS3 are used to animate images and text</li>
+        </ul>
+
+        <button type="button" class="btn btn-xs btn-default" (click)="navigateToPreviousPortfolioItem()">
+            <i class="fa fa-arrow-circle-left"></i>&nbsp;Go to Stock Market sample
+        </button>
+        <button type="button" class="btn btn-xs btn-default" (click)="navigateToPortfolioList()">
+            <i class="fa fa-list-alt"></i>&nbsp;Portfolio List
+        </button>
+        <button type="button" class="btn btn-xs btn-default" (click)="navigateToNextPortfolioItem()">
+           Go to Tournament sample&nbsp;<i class="fa fa-arrow-circle-right"></i>
+        </button>
+    </div>
+    <br/>
+
+    <div id="preload">
+        <div id="introductionText" #introductionText>A long time ago in a galaxy far,<br />far away....</div>
+
+        <img id="logo" #logo src="assets/images/portfolio/starwars.jpg" alt="" />
+
+        <div id="titles">
+            <div id="titlecontent" #titlecontent style="color:#000000">
+                <p>
+                    It is a period of civil war. Rebel spaceships, striking from a hidden base, have won their first victory against the evil
+                    Galactic Empire.
+                </p>
+
+                <p>
+                    During the battle, rebel spies managed to steal secret plans to the Empire's ultimate weapon, the DEATH STAR, an armored
+                    space station with enough power to destroy an entire planet.
+                </p>
+                <p>
+                    Pursued by the Empire's sinister agents, Princess Leia races home aboard her starship, custodian of the stolen plans that
+                    can save her people and restore freedom to the galaxy....
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

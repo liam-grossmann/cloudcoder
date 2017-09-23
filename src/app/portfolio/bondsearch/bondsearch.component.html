@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="starter-template">
+        <h3>UK Government Bond Search (Angular 2.0)</h3>
+        <ul>
+            <li>Build filter expressions (e.g. 'Name starts with 8' and 'Dirty Price > 100')</li>
+        </ul>
+
+        <button type="button" class="btn btn-xs btn-default" (click)="navigateToPreviousPortfolioItem()">
+            <i class="fa fa-arrow-circle-left"></i>&nbsp;Go to Tournament sample
+        </button>
+        <button type="button" class="btn btn-xs btn-default" (click)="navigateToPortfolioList()">
+            <i class="fa fa-list-alt"></i>&nbsp;Portfolio List
+        </button>
+        <button type="button" class="btn btn-xs btn-default" (click)="navigateToNextPortfolioItem()">
+           Go to Desktop sample&nbsp;<i class="fa fa-arrow-circle-right"></i>
+        </button>
+
+    </div>
+    <br/>
+    <bond-list></bond-list>
+</div>
