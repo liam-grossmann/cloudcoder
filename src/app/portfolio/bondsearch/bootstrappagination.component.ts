@@ -16,7 +16,7 @@ export class BootstrapPaginationComponent implements OnInit, OnChanges{
     @Input() itemsPerPage: number;
     @Input() currentPageNumber: number;
     private totalNumberOfPages: number;
-    private arrPageList: number[];
+    public arrPageList: number[];
     @Output() onPageChanged = new EventEmitter<number>();
 
     constructor() {
