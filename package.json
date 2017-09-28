@@ -23,7 +23,7 @@
     "bootstrap": "^3.3.7",
     "bootstrap-nav": "0.0.1",
     "core-js": "^2.4.1",
-    "d3": "^4.4.0",
+    "d3-ng2-service": "^1.17.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.1.1",
     "jquery.backstretch": "^2.1.15",
@@ -34,8 +34,6 @@
   "devDependencies": {
     "@angular/cli": "^1.0.0",
     "@angular/compiler-cli": "^4.1.1",
-    "@types/d3-selection": "^1.0.7",
-    "@types/d3-transition": "^1.0.6",
     "@types/jasmine": "2.5.38",
     "@types/jquery": "^2.0.34",
     "@types/jquery-backstretch": "^2.0.14",

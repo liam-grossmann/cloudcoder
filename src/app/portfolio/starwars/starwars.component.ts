@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
-import * as d3 from 'd3';
+//import * as d3 from 'd3';
+import { D3Service, D3, Selection } from 'd3-ng2-service'; // <-- import the D3 Service, the type alias for the d3 variable and the Selection interface
 
 @Component({
   templateUrl: './starwars.component.html',
@@ -8,11 +9,13 @@ import * as d3 from 'd3';
 })
 export class StarWarsComponent implements OnInit {
 
+  private d3: D3; // <-- Define the private member which will hold the d3 reference
   @ViewChild('introductionText') private introductionText: ElementRef;
   @ViewChild('logo') private logo: ElementRef;
   @ViewChild('titlecontent') private titlecontent: ElementRef;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, d3Service: D3Service) {
+    this.d3 = d3Service.getD3(); // <-- obtain the d3 object from the D3 Service
   }
 
   ngOnInit() {
@@ -37,11 +40,11 @@ export class StarWarsComponent implements OnInit {
     $('#titlecontent').css('color', '#ff6');
 
     // Intro text will disappear
-    d3.select(introductionTextElement).transition().delay(introductionTextDisappears).style("opacity", "0");
+    this.d3.select(introductionTextElement).transition().delay(introductionTextDisappears).style("opacity", "0");
 
     // Image will get smaller and disappear.
-    d3.select(logoElement).transition().delay(logoTextAppears).style("opacity", "1");
-    d3.select(logoElement).transition().delay(logoTextFadeOut).duration(logoTextFadeOutDuration).style("font-size", "5px").style("opacity", "0");
+    this.d3.select(logoElement).transition().delay(logoTextAppears).style("opacity", "1");
+    this.d3.select(logoElement).transition().delay(logoTextFadeOut).duration(logoTextFadeOutDuration).style("font-size", "5px").style("opacity", "0");
   };
 
   navigateToPreviousPortfolioItem() {

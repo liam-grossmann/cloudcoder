@@ -30,6 +30,17 @@ Then deploy to azure using ftp. See README_FTP.md
 ## To Do
 01) Add flip for prices feed https://davidwalsh.name/css-flip
 02) Add Google analytics.
+03) https://desandro.github.io/3dtransforms/docs/card-flip.html
+04) https://reactivetrader.azurewebsites.net/
+05) https://www.howtoisolve.com/top-best-stock-market-app-for-apple-watch-2015/
+06) http://www.pocketberry.com/2011/10/06/nasdaq-launches-free-qfolio-nasdaq-omx-portfolio-manager/
+
+gradient chart - http://www.creativebloq.com/how-to/boost-d3js-charts-with-svg-gradients
+https://react.rocks/example/FinanceReactNative
+
+
+## Google Crawl
+Google crawl for liamgrossmann.com
 
 
 ## Warnings

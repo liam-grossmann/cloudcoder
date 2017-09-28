@@ -1,0 +1,60 @@
+<div class="reactivetraderrightpanel">
+
+    <div class="row">
+        <div class="col-md-3 text-center">Logo here</div>
+
+        <div class="col-md-3">
+            <div class="row text-center large-label">LATEST</div>
+            <div class="row blue-text large-text text-center">{{ ticker.last | number:'1.2-2' }}</div>
+        </div>
+        <div class="col-md-3 ">
+            <div class="row text-center large-label">CHANGE</div>
+            <div *ngIf="ticker.change < 0"  class="row red-text large-text text-center">{{ ticker.change | number:'1.2-2' }}</div>
+            <div *ngIf="ticker.change >= 0" class="row green-text large-text text-center">{{ ticker.change | number:'1.2-2' }}</div>
+        </div>
+        <div class="col-md-3">
+            <div class="row text-center large-label">CHANGE %</div>
+            <div *ngIf="ticker.change < 0"  class="row red-text large-text text-center">{{ ticker.changePercent | number:'1.2-2' }}</div>
+            <div *ngIf="ticker.change >= 0" class="row green-text large-text text-center">{{ ticker.changePercent | number:'1.2-2' }}</div>
+        </div>
+
+    </div>
+
+    <div class="row row-bordered" style="margin-top: 10px"></div>
+
+    <div class="row grey-text" style="margin-top: 10px">
+        <div class="col-md-3 header text-left">EXCHANGE</div>
+        <div class="col-md-9 header text-left">SYMBOL / COMPANY NAME</div>
+    </div>
+    <div class="row">
+        <div class="col-md-3 detail text-left">{{ ticker.exchange }}</div>
+        <div class="col-md-9 detail text-left">{{ ticker.id }} / {{ ticker.name }}</div>
+    </div>
+
+    <div class="row grey-text text-right" style="margin-top: 10px">
+        <div class="col-md-2 header">TODAY'S HIGH</div>
+        <div class="col-md-3 header">TODAY'S LOW</div>
+        <div class="col-md-3 header">PREVIOUS CLOSE</div>
+        <div class="col-md-4 header">MARKET CAP</div>
+    </div>
+    <div class="row text-right">
+        <div class="col-md-2 detail">24.60</div>
+        <div class="col-md-3 detail">23.23</div>
+        <div class="col-md-3 detail">{{ ticker.close | number:'1.2-2' }}</div>
+        <div class="col-md-4 detail">{{ ticker.marketCap }}</div>
+    </div>
+
+    <div class="row grey-text text-right" style="margin-top: 10px">
+        <div class="col-md-2 header">52 WEEK HIGH</div>
+        <div class="col-md-3 header">52 WEEK LOW</div>
+        <div class="col-md-3 header">TOTAL VOLUME</div>
+        <div class="col-md-4 header">SECTOR</div>
+    </div>
+    <div class="row text-right">
+        <div class="col-md-2 detail">{{ ticker.yearHigh | number:'1.2-2' }}</div>
+        <div class="col-md-3 detail">{{ ticker.yearLow | number:'1.2-2' }}</div>
+        <div class="col-md-3 detail">{{ ticker.volume | number:'.0' }}</div>
+        <div class="col-md-4 detail">{{ ticker.sector }}</div>
+    </div>
+
+</div>

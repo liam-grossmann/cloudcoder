@@ -8,9 +8,17 @@ export interface ITicker {
     readonly id: string;
     readonly name: string;
     readonly close: number;
+    readonly exchange: string;
+    readonly yearHigh: number;
+    readonly yearLow: number;
+    readonly sector: string;
+    readonly marketCap: string;
+    readonly volume: number;
     bid: number;
     ask: number;
     last: number;
+    change: number;
+    changePercent: number;
     priceDirection: PriceDirection;
     isSubscribing: boolean;
     setPrices(bid: number, ask: number): void;
@@ -24,13 +32,23 @@ export class Ticker implements ITicker {
     priceDirection: PriceDirection;
     isSubscribing: boolean;
     last: number;
+    change: number;
+    changePercent: number;
 
-    constructor(public readonly id: string, public readonly name: string, public readonly close: number) {
+    constructor(public readonly id: string, 
+        public readonly name: string, 
+        public readonly close: number,
+        public readonly exchange: string,
+        public readonly yearHigh: number,
+        public readonly yearLow: number,
+        public readonly sector: string,
+        public readonly marketCap: string,
+        public readonly volume: number) {
         this.bid = null;
         this.ask = null;
         this.last = null;
         this.priceDirection = PriceDirection.NoChange;
-        this.isSubscribing = false;
+        this.isSubscribing = true;
     }
 
     setPrices(bid: number, ask: number): void {
@@ -50,6 +68,8 @@ export class Ticker implements ITicker {
         this.bid = bid + offset;
         this.ask = ask;
         this.last = (this.bid + this.ask) / 2;
+        this.change = this.last - this.close;
+        this.changePercent = ((this.change) * 100) / this.close;
 
         if (this.close === this.last) {
             this.priceDirection = PriceDirection.NoChange;

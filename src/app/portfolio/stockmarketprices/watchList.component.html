@@ -1,4 +1,54 @@
 <div>
+<div class="row reactivetrader">
+
+	<div class="col-md-4 stackpanel">
+
+		<div class="row stackpanelheader grey-text">&nbsp;NASDAQ Market</div>
+
+		<div class="row grey-text text-center stackpanellabels">
+			<div class="col-md-3">SYMBOL</div>
+			<div class="col-md-3">LATEST</div>
+			<div class="col-md-3">CHANGE</div>
+			<div class="col-md-3">CHG %</div>
+		</div>
+
+
+		<div class="stackpanelbuttons">
+
+			<div class="row text-center stackpanelbutton" *ngFor="let ticker of watchList" (click)="toggleSelection(ticker)">
+					<div class="col-md-3 white-text">{{ticker.id}}</div>
+					<div class="col-md-3 blue-text">{{ticker.last | number:'1.2-2'}}</div>
+					<div *ngIf="ticker.change < 0">
+						<div class="col-md-3 red-text">{{ticker.change | number:'1.2-2'}}</div>
+						<div class="col-md-3 red-text">{{ticker.changePercent | number:'1.2-2'}}</div>
+					</div>
+					<div *ngIf="ticker.change >= 0">
+							<div class="col-md-3 green-text">{{ticker.change | number:'1.2-2'}}</div>
+							<div class="col-md-3 green-text">{{ticker.changePercent | number:'1.2-2'}}</div>
+					</div>
+			</div>
+		</div>
+	</div>
+
+
+
+	<div class="col-md-8">
+		<div class="row">
+			<ticker-details [ticker]="selectedTicker"></ticker-details>
+		</div>
+		<div class="row">
+			<ticker-chart [ticker]="selectedTicker"></ticker-chart>
+		</div>
+	</div>
+
+</div>
+
+
+<br>
+
+
+
+<div>
 	<table class="table table-bordered table-striped">
 		<thead>
 			<tr>
@@ -29,4 +79,6 @@
 			</tr>
 		</tbody>
 	</table>
+</div>
+
 </div>

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import * as d3 from 'd3';
 
 @Component({
   templateUrl: './stockmarketprices.component.html'

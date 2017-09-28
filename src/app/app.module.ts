@@ -3,6 +3,7 @@ import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { D3Service } from 'd3-ng2-service'; // <-- import statement
 
 import { appRoutes } from './app.routes';
 
@@ -17,6 +18,8 @@ import { TournamentWheelComponent } from './portfolio/tournamentwheel/tournament
 
 /* Stock Price Child Components */
 import { WatchListComponent } from './portfolio/stockmarketprices/watchList.component';
+import { TickerDetailsComponent } from './portfolio/stockmarketprices/tickerDetails.component';
+import { TickerChartComponent } from './portfolio/stockmarketprices/tickerChart.component';
 import { TickerPriceDirectionComponent } from './portfolio/stockmarketprices/tickerPriceDirection.component';
 
 /* Bond Search Child Component */
@@ -42,6 +45,8 @@ import { BondSearchService } from './portfolio/bondsearch/bondsearch.service';
     StockMarketPricesComponent,
     TournamentWheelComponent,
     WatchListComponent,
+    TickerDetailsComponent,
+    TickerChartComponent,
     TickerPriceDirectionComponent,
     BondListComponent,
     FilterCriteriaBuilderComponent,
@@ -57,7 +62,8 @@ import { BondSearchService } from './portfolio/bondsearch/bondsearch.service';
   ],
   providers: [
     WatchListService,
-    BondSearchService
+    BondSearchService,
+    D3Service
   ],
   bootstrap: [AppComponent]
 })
