@@ -12,11 +12,6 @@ import { WatchListService } from './watchList.service';
 })
 export class WatchListComponent implements OnInit, OnDestroy {
 
-// TODO:
-// 03. Radnom http://jsfiddle.net/z64Jr/3/
-// https://stackoverflow.com/questions/8597731/are-there-known-techniques-to-generate-realistic-looking-fake-stock-data
-
-    
     watchList: ITicker[] = [];
     selectedTicker: Ticker;
     tickerTapeServiceId: number;
@@ -28,7 +23,7 @@ export class WatchListComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.watchList = this._watchListService.getWatchList();
         this.selectedTicker = this.watchList[0];
-        let timer = TimerObservable.create(2000, 500);
+        let timer = TimerObservable.create(2000, 1000);
         this.subscription = timer.subscribe(t => {
             this.onTickerTape();
         });
@@ -49,11 +44,10 @@ export class WatchListComponent implements OnInit, OnDestroy {
     onTickerTape(): void {
         for (let ticker of this.watchList) {
             if (ticker.isSubscribing) {
-                let randomnumber = ticker.getNextRandomNumber();
-                ticker.setPrices(ticker.bid - randomnumber, ticker.ask + randomnumber);
+                let nextPrice = ticker.getNextPrice();
+                ticker.updatePrices(nextPrice);
+                this.selectedTicker = this.selectedTicker;
             }
         }
     }
-
-
 }

@@ -3,6 +3,10 @@ import { Ticker, ITicker } from './watchList';
 
 @Injectable()
 export class WatchListService {
+
+    private defaultAnnualVolatility = .25;      // Annual volatility 25%
+    private defaultAnnualReturn = .10;          // Annual return 12%
+
     constructor() { }
 
     getWatchList(): ITicker[] {
@@ -38,7 +42,9 @@ export class WatchListService {
             104.08,
             'ELECTRONIC COMPUTERS',
             '791.73B',
-            27950000);
+            27950000,
+            this.defaultAnnualVolatility,
+            this.defaultAnnualReturn);
         return valueToReturn;
     }
 
@@ -51,7 +57,9 @@ export class WatchListService {
             710.10,
             'CATALOG AND MAIL-ORDER',
             '459.72B',
-            3463395);
+            3463395,
+            this.defaultAnnualVolatility,
+            this.defaultAnnualReturn);
         return valueToReturn;
     }
 
@@ -64,7 +72,9 @@ export class WatchListService {
             27.56,
             'SEMICONDUCTORS',
             '53.15BB',
-            9986960 );
+            9986960,
+            this.defaultAnnualVolatility,
+            -.10);
         return valueToReturn;
     }
 
@@ -77,7 +87,9 @@ export class WatchListService {
             29.12,
             'COMMS EQPT',
             '165.32B',
-            20410000 );
+            20410000,
+            this.defaultAnnualVolatility,
+            this.defaultAnnualReturn);
         return valueToReturn;
     }
 
@@ -90,7 +102,9 @@ export class WatchListService {
             27.28,
             'BUSINESS SERVICES',
             '40.78B',
-            8170000);
+            8170000,
+            this.defaultAnnualVolatility,
+            this.defaultAnnualReturn);
         return valueToReturn;
     }
 
@@ -103,7 +117,9 @@ export class WatchListService {
             113.55,
             'SERVICES',
             '487.32B',
-            16501709);
+            16501709,
+            .50,
+            -.30);
         return valueToReturn;
     }
 
@@ -116,7 +132,9 @@ export class WatchListService {
             727.54,
             'SERVICES',
             '659.55B',
-            1550000);
+            1550000,
+            this.defaultAnnualVolatility,
+            this.defaultAnnualReturn);
         return valueToReturn;
     }
 
@@ -129,7 +147,9 @@ export class WatchListService {
             139.13,
             'COMPUTER EQUIPMENT',
             '135.75B',
-            3970000);
+            3970000,
+            this.defaultAnnualVolatility,
+            this.defaultAnnualReturn);
         return valueToReturn;
     }
 
@@ -142,7 +162,9 @@ export class WatchListService {
             33.23,
             'SEMICONDUCTORS',
             '176.4B',
-            21899260);
+            21899260,
+            this.defaultAnnualVolatility,
+            this.defaultAnnualReturn);
         return valueToReturn;
     }
 
@@ -155,7 +177,9 @@ export class WatchListService {
             56.31,
             'SOFTWARE',
             '568.81B',
-            20940698);
+            20940698,
+            this.defaultAnnualVolatility * 2,
+            this.defaultAnnualReturn);
         return valueToReturn;
     }
 
@@ -168,7 +192,9 @@ export class WatchListService {
             178.19,
             'CAR MANUFACTURER',
             '50.74B',
-            6873281);
+            6873281,
+            this.defaultAnnualVolatility,
+            -.22);
         return valueToReturn;
     }
 
@@ -181,7 +207,9 @@ export class WatchListService {
             96.02,
             'MOVIE RENTAL',
             '77.85B',
-            6905321);
+            6905321,
+            this.defaultAnnualVolatility,
+            this.defaultAnnualReturn);
         return valueToReturn;
     }
 

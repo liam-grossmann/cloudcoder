@@ -1,7 +1,7 @@
 <div class="reactivetraderrightpanel">
 
     <div class="row">
-        <div class="col-md-3 text-center">Logo here</div>
+        <div class="col-md-3 text-center large-text">{{ ticker.id }}</div>
 
         <div class="col-md-3">
             <div class="row text-center large-label">LATEST</div>
@@ -38,8 +38,8 @@
         <div class="col-md-4 header">MARKET CAP</div>
     </div>
     <div class="row text-right">
-        <div class="col-md-2 detail">24.60</div>
-        <div class="col-md-3 detail">23.23</div>
+        <div class="col-md-2 detail">{{ ticker.high | number:'1.2-2' }}</div>
+        <div class="col-md-3 detail">{{ ticker.low | number:'1.2-2' }}</div>
         <div class="col-md-3 detail">{{ ticker.close | number:'1.2-2' }}</div>
         <div class="col-md-4 detail">{{ ticker.marketCap }}</div>
     </div>
