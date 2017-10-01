@@ -11,7 +11,7 @@ div, button
     font-size: 12px;
 } 
 
-  div.reactivetrader {
+ div.reactivetrader {
       background: black;
       color: white;
       width: 100%;
@@ -41,7 +41,7 @@ div, button
 
   div.stackpanelbuttons :hover
   {
-      background:#354C5C;
+      background: #49687e;
       cursor: pointer;
   }
 
@@ -53,6 +53,16 @@ div, button
       border-color: black; */
       background: #15222A;
   }
+
+  div.stackpanelbutton.active
+  {
+      /* padding: 7px 0px 7px 0px; */
+      /* margin-bottom: 2px; */
+      /* border-spacing  : 5px;
+      border-color: black; */
+      background: #354C5C;
+  }
+  
 
 
 

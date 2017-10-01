@@ -46,7 +46,7 @@ export class TickerChartComponent implements OnInit {
         //////////////// Set the Scales ///////////////////
         ///////////////////////////////////////////////////
         //Set the dimensions of the chart
-        var margin = { top: 20, right: 40, bottom: 20, left: 40 },
+        var margin = { top: 20, right: 50, bottom: 20, left: 40 },
             width = 700 - margin.left - margin.right,
             height = 200 - margin.top - margin.bottom;
 
@@ -114,12 +114,14 @@ export class TickerChartComponent implements OnInit {
             .attr("transform", "translate(0," + height + ")")
             .call(xAxis);
         xNode.select('path').style("stroke", "#C4C4C4").style("fill", "none");
+        xNode.selectAll('text').style("fill", "#C4C4C4");
         //Add the Y Axis
         var yNode = svg.append("g")
             .attr("class", "y axis")
             .attr("transform", "translate(" + width + " ,0)")
             .call(yAxis);
         yNode.select('path').style("stroke", "#C4C4C4").style("fill", "none");
+        yNode.selectAll('text').style("fill", "#C4C4C4");
 
         svg.append("text").text(this.ticker.id + " INTRADAY").attr("fill", "#05AFEC");
 

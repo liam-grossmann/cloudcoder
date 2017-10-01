@@ -6,6 +6,7 @@ export class WatchListService {
 
     private defaultAnnualVolatility = .25;      // Annual volatility 25%
     private defaultAnnualReturn = .10;          // Annual return 12%
+    private imageRoot = 'assets/images/stockmarketprices/';
 
     constructor() { }
 
@@ -32,7 +33,6 @@ export class WatchListService {
         return listToReturn;
     }
 
-
     getApple(): ITicker {
         let valueToReturn = new Ticker('AAPL',
             'APPLE',
@@ -44,7 +44,8 @@ export class WatchListService {
             '791.73B',
             27950000,
             this.defaultAnnualVolatility,
-            this.defaultAnnualReturn);
+            this.defaultAnnualReturn,
+            this.imageRoot + 'apple.png');
         return valueToReturn;
     }
 
@@ -59,7 +60,8 @@ export class WatchListService {
             '459.72B',
             3463395,
             this.defaultAnnualVolatility,
-            this.defaultAnnualReturn);
+            this.defaultAnnualReturn,
+            this.imageRoot + 'amazon.png');
         return valueToReturn;
     }
 
@@ -74,7 +76,8 @@ export class WatchListService {
             '53.15BB',
             9986960,
             this.defaultAnnualVolatility,
-            -.10);
+            -.10,
+            this.imageRoot + 'amat.png');
         return valueToReturn;
     }
 
@@ -89,7 +92,8 @@ export class WatchListService {
             '165.32B',
             20410000,
             this.defaultAnnualVolatility,
-            this.defaultAnnualReturn);
+            this.defaultAnnualReturn,
+            this.imageRoot + 'cisco.png');
         return valueToReturn;
     }
 
@@ -104,7 +108,8 @@ export class WatchListService {
             '40.78B',
             8170000,
             this.defaultAnnualVolatility,
-            this.defaultAnnualReturn);
+            this.defaultAnnualReturn,
+            this.imageRoot + 'ebay.png');
         return valueToReturn;
     }
 
@@ -119,7 +124,8 @@ export class WatchListService {
             '487.32B',
             16501709,
             .50,
-            -.30);
+            -.30,
+            this.imageRoot + 'facebook.png');
         return valueToReturn;
     }
 
@@ -134,7 +140,8 @@ export class WatchListService {
             '659.55B',
             1550000,
             this.defaultAnnualVolatility,
-            this.defaultAnnualReturn);
+            this.defaultAnnualReturn,
+            this.imageRoot + 'google.png');
         return valueToReturn;
     }
 
@@ -149,7 +156,8 @@ export class WatchListService {
             '135.75B',
             3970000,
             this.defaultAnnualVolatility,
-            this.defaultAnnualReturn);
+            this.defaultAnnualReturn,
+            this.imageRoot + 'ibm.png');
         return valueToReturn;
     }
 
@@ -164,7 +172,8 @@ export class WatchListService {
             '176.4B',
             21899260,
             this.defaultAnnualVolatility,
-            this.defaultAnnualReturn);
+            this.defaultAnnualReturn,
+            this.imageRoot + 'intel.png');
         return valueToReturn;
     }
 
@@ -179,7 +188,8 @@ export class WatchListService {
             '568.81B',
             20940698,
             this.defaultAnnualVolatility * 2,
-            this.defaultAnnualReturn);
+            this.defaultAnnualReturn,
+            this.imageRoot + 'microsoft.png');
         return valueToReturn;
     }
 
@@ -194,7 +204,8 @@ export class WatchListService {
             '50.74B',
             6873281,
             this.defaultAnnualVolatility,
-            -.22);
+            -.22,
+            this.imageRoot + 'tesla.png');
         return valueToReturn;
     }
 
@@ -209,7 +220,8 @@ export class WatchListService {
             '77.85B',
             6905321,
             this.defaultAnnualVolatility,
-            this.defaultAnnualReturn);
+            this.defaultAnnualReturn,
+            this.imageRoot + 'netflix.png');
         return valueToReturn;
     }
 

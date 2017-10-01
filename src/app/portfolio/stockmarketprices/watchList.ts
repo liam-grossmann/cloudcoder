@@ -16,6 +16,7 @@ export interface ITicker {
     readonly volume: number;
     readonly annualVolatility: number;     // 25% annual volatility
     readonly annualReturn: number;         // 12% annual return
+    readonly imageUrl: string;
     last: number;
     high: number;
     low: number;
@@ -54,7 +55,8 @@ export class Ticker implements ITicker {
         public readonly marketCap: string,
         public readonly volume: number,
         public readonly annualVolatility: number,
-        public readonly annualReturn: number) {
+        public readonly annualReturn: number,
+        public readonly imageUrl: string) {
 
         this.high = this.close;
         this.low = this.close;

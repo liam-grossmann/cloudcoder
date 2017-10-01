@@ -20,7 +20,6 @@ import { TournamentWheelComponent } from './portfolio/tournamentwheel/tournament
 import { WatchListComponent } from './portfolio/stockmarketprices/watchList.component';
 import { TickerDetailsComponent } from './portfolio/stockmarketprices/tickerDetails.component';
 import { TickerChartComponent } from './portfolio/stockmarketprices/tickerChart.component';
-import { TickerPriceDirectionComponent } from './portfolio/stockmarketprices/tickerPriceDirection.component';
 
 /* Bond Search Child Component */
 import { BondListComponent } from './portfolio/bondsearch/bondList.component';
@@ -47,7 +46,6 @@ import { BondSearchService } from './portfolio/bondsearch/bondsearch.service';
     WatchListComponent,
     TickerDetailsComponent,
     TickerChartComponent,
-    TickerPriceDirectionComponent,
     BondListComponent,
     FilterCriteriaBuilderComponent,
     FilterComponent,

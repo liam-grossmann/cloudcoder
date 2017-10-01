@@ -1,7 +1,12 @@
 <div class="reactivetraderrightpanel">
 
     <div class="row">
-        <div class="col-md-3 text-center large-text">{{ ticker.id }}</div>
+        <div class="col-md-3" *ngIf="ticker.imageUrl != ''">
+            <img style="height: 64px;" src='{{ ticker.imageUrl }}'>
+        </div>
+        <div class="col-md-3 text-center large-text" *ngIf="ticker.imageUrl == ''">
+            {{ ticker.id }}
+        </div>
 
         <div class="col-md-3">
             <div class="row text-center large-label">LATEST</div>
