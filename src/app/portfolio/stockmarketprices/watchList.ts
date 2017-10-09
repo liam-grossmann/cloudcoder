@@ -101,7 +101,7 @@ export class Ticker implements ITicker {
 
             minute = minute + 1;
             let timeString = hour + ":" + minute.toString();
-            this.intradayPrices.push({  dateString: timeString, number: lastPrice, date: null });
+            this.intradayPrices.push({  timeString: timeString, stockPrice: lastPrice, time: null });
 
             this.high = Math.max(this.high, lastPrice);
             this.low = Math.min(this.low, lastPrice);

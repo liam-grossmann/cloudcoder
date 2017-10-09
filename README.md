@@ -31,12 +31,6 @@ Then deploy to azure using ftp. See README_FTP.md
 01) Add flip for prices feed https://davidwalsh.name/css-flip
 02) Add Google analytics.
 03) https://desandro.github.io/3dtransforms/docs/card-flip.html
-04) https://reactivetrader.azurewebsites.net/
-05) https://www.howtoisolve.com/top-best-stock-market-app-for-apple-watch-2015/
-06) http://www.pocketberry.com/2011/10/06/nasdaq-launches-free-qfolio-nasdaq-omx-portfolio-manager/
-
-gradient chart - http://www.creativebloq.com/how-to/boost-d3js-charts-with-svg-gradients
-https://react.rocks/example/FinanceReactNative
 
 
 ## Google Crawl
@@ -50,3 +44,12 @@ npm WARN deprecated jquery.backstretch@2.1.15: Please move to the official packa
 The following warnings are not serious and only affect windows. On MAC, this should run cleanly:
 npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\chokidar\node_modules\fsevents):
 npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+
+## Todo
+01) Make sure the project compiles and runs on a mac
+02) Make the charts render in real time - so that the user sees them drawing
+03) Make the charts update in real time - that would be really cool.
+04) Add D3 map example - a whole new example
+05) Add Material Design example
+06) Add blog.

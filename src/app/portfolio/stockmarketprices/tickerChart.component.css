@@ -6,20 +6,10 @@ div.reactivetraderchartpanel {
     background: linear-gradient(#142131, #0D1114 80%);
 }
 
-body {
-    /* font-size: 10px;
-    font-family: 'Open Sans', sans-serif; */
-    font-weight: 400;
-    fill: yellow;
-    /* text-align: center; */
-  }
-
-
 .axis path,
 .axis line {
     fill: none;
     stroke: #C4C4C4;
-    /* shape-rendering: crispEdges;  */
 }
 
 .axis text {
@@ -36,3 +26,10 @@ body {
 .lineDots {
     fill: none;
 }
+
+.grid line {
+    stroke: #05AFEC;
+    stroke-opacity: 0.7;
+    shape-rendering: crispEdges;
+  }
+  
