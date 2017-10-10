@@ -5,13 +5,13 @@ declare var System: any;
 
 // We only import the portions of d3 that we need
 declare module 'd3' {
-   export * from 'd3-axis';
-   export * from 'd3-scale'
-   export * from 'd3-selection';
-   export * from 'd3-transition';
-   export * from 'd3-time';
-   export * from 'd3-time-format';
-     export * from 'd3-array';
+  export * from 'd3-axis';
+  export * from 'd3-scale'
+  export * from 'd3-selection';
+  export * from 'd3-transition';
+  export * from 'd3-time';
+  export * from 'd3-time-format';
+  export * from 'd3-array';
   export * from 'd3-brush';
   export * from 'd3-chord';
   export * from 'd3-collection';
@@ -30,14 +30,8 @@ declare module 'd3' {
   export * from 'd3-quadtree';
   export * from 'd3-queue';
   export * from 'd3-random';
-  export * from 'd3-request';
   export * from 'd3-shape';
   export * from 'd3-timer';
   export * from 'd3-voronoi';
   export * from 'd3-zoom';
 }
-
-// declare module 'd3' {
-
-// }
-

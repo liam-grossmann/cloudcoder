@@ -46,10 +46,38 @@ npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\ch
 npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
 
 
+On the MAC we get
+npm WARN deprecated jquery.backstretch@2.1.15: Please move to the official package name `jquery-backstretch`
+npm WARN prefer global node-gyp@3.6.2 should be installed with -g
+
+
+
 ## Todo
 01) Make sure the project compiles and runs on a mac
 02) Make the charts render in real time - so that the user sees them drawing
+First way is to use a curtain:
+https://bl.ocks.org/phvaillant/53b90038b9c5ac5f6b817a4f63fbc2af
+
+Second way is to reveal:
+http://big-elephants.com/2014-06/unrolling-line-charts-d3js/
+
+This one includes a reference to mike bostock.
+https://bost.ocks.org/mike/path/
+
+Which he calls path transitions.
+
+Nice.
+
 03) Make the charts update in real time - that would be really cool.
+
 04) Add D3 map example - a whole new example
+Good tutorial.
+http://maptimeboston.github.io/d3-maptime/#/
+
 05) Add Material Design example
+
 06) Add blog.
+
+07) Add powershell script to deploy
+
+
