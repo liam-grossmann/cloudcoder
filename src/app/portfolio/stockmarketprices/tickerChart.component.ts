@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy, Input, ViewEncapsulation } from '@angular/core';
-import { D3Service, D3, Selection, ScaleTime, ScaleLinear } from 'd3-ng2-service'; // <-- import the D3 Service, the type alias for the d3 variable and the Selection interface
+import { D3Service, D3, Selection, ScaleTime, ScaleLinear } from 'd3-ng2-service';
+// <-- import the D3 Service, the type alias for the d3 variable and the Selection interface
 import { ITicker, Ticker } from './watchList';
 
 @Component({
@@ -47,105 +48,151 @@ export class TickerChartComponent implements OnInit {
         let yScale = this.getYScaleRange(dataset, height);
 
         // Define the axes
-        var xAxis = this.d3.axisBottom(xScale).ticks(7);
-        var yAxis = this.d3.axisRight(yScale).ticks(10);
+        let xAxis = this.d3.axisBottom(xScale).ticks(7);
+        let yAxis = this.d3.axisRight(yScale).ticks(10);
 
         // Initiate the line function
-        var lineFunction = this.d3.line<any>()
+        let lineFunction = this.d3.line<any>()
             .curve(this.d3.curveMonotoneX)
             .x(function (d) { return xScale(d.time); })
             .y(function (d) { return yScale(d.stockPrice); });
 
         // Initiate the area line function
-        var areaFunction = this.d3.area<any>()
+        let areaFunction = this.d3.area<any>()
             .curve(this.d3.curveMonotoneX)
             .x(function (d) { return xScale(d.time); })
             .y0(height)
             .y1(function (d) { return yScale(d.stockPrice); });
 
         // Add the svg canvas for the line chart
-        var svg = this.d3.select("#chart")
-            .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
-            .append("g")
-            .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        let svg = this.d3.select('#chart')
+            .append('svg')
+            .attr('width', width + margin.left + margin.right)
+            .attr('height', height + margin.top + margin.bottom)
+            .append('g')
+            .attr('transform', 'translate(' + margin.left + ',' + margin.top + ')');
 
         // Gradient below the line chart
-        var areaGradient = svg.append('defs')
-            .append("linearGradient")
+        let areaGradient = svg.append('defs')
+            .append('linearGradient')
             .attr('id', 'areaGradient')
-            .attr("x1", "0%").attr("y1", "0%")
-            .attr("x2", "0%").attr("y2", "100%");
+            .attr('x1', '0%').attr('y1', '0%')
+            .attr('x2', '0%').attr('y2', '100%');
 
-        // Append the first stop - the color at the top                  
-        areaGradient.append("stop")
-            .attr("offset", "0%")
-            .attr("stop-color", "#05AFEC")
-            .attr("stop-opacity", 0.6);
+        // Append the first stop - the color at the top
+        areaGradient.append('stop')
+            .attr('offset', '0%')
+            .attr('stop-color', '#05AFEC')
+            .attr('stop-opacity', 0.6);
 
-        //Append the second stop - white transparant almost at the end		
-        areaGradient.append("stop")
-            .attr("offset", "95%")
-            .attr("stop-color", "white")
-            .attr("stop-opacity", 0);
+        // Append the second stop - white transparant almost at the end
+        areaGradient.append('stop')
+            .attr('offset', '95%')
+            .attr('stop-color', 'white')
+            .attr('stop-opacity', 0);
 
         // add the X gridlines
-        // svg.append("g")
-        //     .attr("class", "grid")
+        // svg.append('g')
+        //     .attr('class', 'grid')
         //     .call(this.d3.axisLeft(yScale)
         //         .ticks(5)
         //         .tickSize(-width)
         //         .tickFormat(null));
 
         // Add the X Axis
-        let xNode = svg.append("g")
-            .attr("class", "x axis")
-            .attr("transform", "translate(0," + height + ")")
+        let xNode = svg.append('g')
+            .attr('class', 'x axis')
+            .attr('transform', 'translate(0,' + height + ')')
             .call(xAxis);
-        xNode.select('path').style("stroke", "#C4C4C4").style("fill", "none");
-        xNode.selectAll('text').style("fill", "#C4C4C4");
+        xNode.select('path').style('stroke', '#C4C4C4').style('fill', 'none');
+        xNode.selectAll('text').style('fill', '#C4C4C4');
 
         // Add the Y Axis
-        let yNode = svg.append("g")
-            .attr("class", "y axis")
-            .attr("transform", "translate(" + width + " ,0)")
+        let yNode = svg.append('g')
+            .attr('class', 'y axis')
+            .attr('transform', 'translate(' + width + ' ,0)')
             .call(yAxis);
-        yNode.select('path').style("stroke", "#C4C4C4").style("fill", "none");
-        yNode.selectAll('text').style("fill", "#C4C4C4");
+        yNode.select('path').style('stroke', '#C4C4C4').style('fill', 'none');
+        yNode.selectAll('text').style('fill', '#C4C4C4');
 
         // Add chart title
-        svg.append("text").text(this.ticker.id + " INTRADAY").attr("fill", "#05AFEC");
+        svg.append('text').text(this.ticker.id + ' INTRADAY').attr('fill', '#05AFEC');
 
         // Draw the underlying area chart filled with the gradient
-        svg.append("path")
-            .attr("class", "area")
-            .style("fill", "url(#areaGradient)")
-            .attr("d", areaFunction(dataset));
+        svg.append('path')
+            .attr('class', 'area')
+            .style('fill', 'url(#areaGradient)')
+            .attr('d', areaFunction(dataset));
 
-        svg.append("path")
-            .attr("class", "line")
-            .attr("d", lineFunction(dataset));
+        svg.append('path')
+            .attr('class', 'line')
+            .attr('d', lineFunction(dataset));
 
-        svg.selectAll(".lineDots")
+        svg.selectAll('.lineDots')
             .data(dataset, function (d) { return d.time; })
-            .enter().append("circle")
-            .attr("class", "lineDots")
-            .attr("r", 3)
-            .attr("cx", function (d) { return xScale(d.time); })
-            .attr("cy", function (d) { return yScale(d.stockPrice); });
+            .enter().append('circle')
+            .attr('class', 'lineDots')
+            .attr('r', 3)
+            .attr('cx', function (d) { return xScale(d.time); })
+            .attr('cy', function (d) { return yScale(d.stockPrice); });
+
+        // Add a gradient for the curtain rectangle.
+        let gradient = svg.append('defs')
+            .append('linearGradient')
+            .attr('id', 'gradient')
+            .attr('x1', '0%')
+            .attr('y1', '0%')
+            .attr('x2', '100%')
+            .attr('y2', '100%')
+            .attr('spreadMethod', 'pad');
+
+        gradient.append('stop')
+            .attr('offset', '0%')
+            .attr('stop-color', '#0D1114')
+            .attr('stop-opacity', 1);
+
+        gradient.append('stop')
+            .attr('offset', '80%')
+            .attr('stop-color', '#142131')
+            .attr('stop-opacity', 1);
+
+
+        // Add 'curtain' rectangle to hide entire graph 
+        let curtain = svg.append('rect')
+            .attr('x', -1 * width)
+            .attr('y', -1 * height)
+            .attr('height', height)
+            .attr('width', width)
+            .attr('class', 'curtain')
+            .attr('transform', 'rotate(180)')
+            .style('fill', 'url(#gradient)');;
+
+        // Create a shared transition for anything we're animating 
+        var t = svg.transition()
+            .delay(150)
+            .duration(1500)
+            .ease(this.d3.easeLinear)
+            .on('end', function () {
+                // d3.select('line.guide')
+                //   .transition()
+                //   .style('opacity', 0)
+                //   .remove()
+            });
+
+        t.select('rect.curtain').attr('width', 0);
+        // t.select('line.guide').attr('transform', 'translate(' + width + ', 0)');
     }
 
     // Parse the time for each item in the dataset
     parseTimes(dataset: any[]): void {
-        var parseTime = this.d3.timeParse("%H:%M");
+        let parseTime = this.d3.timeParse('%H:%M');
         dataset.forEach(function (d) {
             d.time = parseTime(d.timeString);
         });
     }
 
     clearExistingChart(): void {
-        this.d3.select("#chart").selectAll("*").remove();
+        this.d3.select('#chart').selectAll('*').remove();
     }
 
     getXScaleRange(dataset: any[], width: number): ScaleTime<number, number> {

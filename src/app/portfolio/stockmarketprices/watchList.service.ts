@@ -12,7 +12,7 @@ export class WatchListService {
 
     getWatchList(): ITicker[] {
         let listToReturn = new Array<Ticker>();
-       
+
         listToReturn.push(this.getApple());
         listToReturn.push(this.getAmazon());
         listToReturn.push(this.getAppliedMaterials());
@@ -29,7 +29,7 @@ export class WatchListService {
         listToReturn.push(this.getMicrosoft());
         listToReturn.push(this.getNetFlix());
         listToReturn.push(this.getTesla());
-        
+
         return listToReturn;
     }
 
@@ -224,5 +224,4 @@ export class WatchListService {
             this.imageRoot + 'netflix.png');
         return valueToReturn;
     }
-
 }

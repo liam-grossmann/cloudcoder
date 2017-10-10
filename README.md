@@ -53,10 +53,9 @@ npm WARN prefer global node-gyp@3.6.2 should be installed with -g
 
 
 ## Todo
-01) Make sure the project compiles and runs on a mac
-02) Make the charts render in real time - so that the user sees them drawing
-First way is to use a curtain:
-https://bl.ocks.org/phvaillant/53b90038b9c5ac5f6b817a4f63fbc2af
+01) Make the charts render in real time - so that the user sees them drawing
+    We've used a curtan which is working but a bit hacky. The background is a off.
+    https://bl.ocks.org/phvaillant/53b90038b9c5ac5f6b817a4f63fbc2af
 
 Second way is to reveal:
 http://big-elephants.com/2014-06/unrolling-line-charts-d3js/
@@ -67,6 +66,10 @@ https://bost.ocks.org/mike/path/
 Which he calls path transitions.
 
 Nice.
+
+02) Some of the stock axis show values ti 1 decinal place. would like always 2 decimal places
+    Center the list values
+    I'd like the range to be + / - 1 so that the chart values are better spaced out.
 
 03) Make the charts update in real time - that would be really cool.
 
