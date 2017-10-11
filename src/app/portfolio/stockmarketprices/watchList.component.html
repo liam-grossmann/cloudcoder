@@ -14,7 +14,7 @@
 		<div class="stackpanelbuttons">
 
 			<div class="row text-center stackpanelbutton"  [ngClass]="{'active': selectedTicker == ticker}" *ngFor="let ticker of watchList" (click)="toggleSelection(ticker)">
-					<div class="col-md-2 white-text">
+					<div class="col-md-3 white-text">
 						{{ticker.id}}
 					</div>
 					<div class="col-md-3 blue-text">{{ticker.last | number:'1.2-2'}}</div>

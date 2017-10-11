@@ -53,34 +53,32 @@ npm WARN prefer global node-gyp@3.6.2 should be installed with -g
 
 
 ## Todo
+
 01) Make the charts render in real time - so that the user sees them drawing
     We've used a curtan which is working but a bit hacky. The background is a off.
     https://bl.ocks.org/phvaillant/53b90038b9c5ac5f6b817a4f63fbc2af
 
-Second way is to reveal:
-http://big-elephants.com/2014-06/unrolling-line-charts-d3js/
+    Second way is to reveal:
+    http://big-elephants.com/2014-06/unrolling-line-charts-d3js/
 
-This one includes a reference to mike bostock.
-https://bost.ocks.org/mike/path/
+    This one includes a reference to mike bostock.
+    https://bost.ocks.org/mike/path/
 
-Which he calls path transitions.
+    Which he calls path transitions.
+    Nice.
 
-Nice.
-
-02) Some of the stock axis show values ti 1 decinal place. would like always 2 decimal places
-    Center the list values
-    I'd like the range to be + / - 1 so that the chart values are better spaced out.
+02) I'd like the range to be + / - 1 so that the chart values are better spaced out.
 
 03) Make the charts update in real time - that would be really cool.
 
 04) Add D3 map example - a whole new example
-Good tutorial.
-http://maptimeboston.github.io/d3-maptime/#/
+    Good tutorial.
+    http://maptimeboston.github.io/d3-maptime/#/
 
 05) Add Material Design example
 
-06) Add blog.
+06) Add blog. Some good 
 
 07) Add powershell script to deploy
-
+    https://msdn.microsoft.com/en-us/magazine/dn948107.aspx
 

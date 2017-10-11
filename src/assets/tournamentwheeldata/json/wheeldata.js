@@ -53,7 +53,7 @@ var wheelData = {
             "MainPanelDisplayText": {
                 "TextBlock": {
                     "Foreground": "Gold",
-                    "Text": "Here is some content for a rim segment"
+                    "Text": "WELCOME TO WORLD CUP 2010 SCHEDULE"
                 }
             },
             "Spokes": {
@@ -230,25 +230,33 @@ var wheelData = {
                   "Id": "06JUL",
                   "Text": "Tue 6 Jul",
                   "Foreground": "Red",
-                  "RelatedSpokeIds": "CAPE SEMI URU NED"
+                  "RelatedSpokeIds": "CAPE SEMI URU NED",
+                  "MainPanelDisplayType": "Fixtures",
+                  "RelatedFixtureIds": "MATCH61"
               },
               {
                   "Id": "07JUL",
                   "Text": "Wed 7 Jul",
                   "Foreground": "Red",
-                  "RelatedSpokeIds": "DURB SEMI GER ESP"
+                  "RelatedSpokeIds": "DURB SEMI GER ESP",
+                  "MainPanelDisplayType": "Fixtures",
+                  "RelatedFixtureIds": "MATCH62"
               },
               {
                   "Id": "10JUL",
                   "Text": "Sat 10 Jul",
                   "Foreground": "Red",
-                  "RelatedSpokeIds": "ELIZ 34PL URU GER"
+                  "RelatedSpokeIds": "ELIZ 34PL URU GER",
+                  "MainPanelDisplayType": "Fixtures",
+                  "RelatedFixtureIds": "MATCH63"
               },
               {
                   "Id": "11JUL",
                   "Text": "Sun 11 Jul",
                   "Foreground": "Red",
-                  "RelatedSpokeIds": "JB01 FIN NED ESP"
+                  "RelatedSpokeIds": "JB01 FIN NED ESP",
+                  "MainPanelDisplayType": "Fixtures",
+                  "RelatedFixtureIds": "MATCH64"
               }
             ]
             }
@@ -270,7 +278,7 @@ var wheelData = {
                   "MainPanelDisplayText": {
                     "TextBlock": {
                         "Foreground": "Gold",
-                        "Text": "Here is some content for a rim segment"
+                        "Text": "Wheel supports text or pictures"
                     }
                 }
                 },
@@ -431,19 +439,25 @@ var wheelData = {
                   "Id": "SEMI",
                   "Text": "SEMIFINALS",
                   "Foreground": "Orange",
-                  "RelatedSpokeIds": "URU NED GER ESP DURB CAPE 06JUL 07JUL"
+                  "RelatedSpokeIds": "URU NED GER ESP DURB CAPE 06JUL 07JUL",
+                  "MainPanelDisplayType": "Fixtures",
+                  "RelatedFixtureIds": "MATCH61 MATCH62"
               },
               {
                   "Id": "34PL",
                   "Text": "3RD / 4TH PLACE",
                   "Foreground": "Orange",
-                  "RelatedSpokeIds": "URU GER ELIZ 10JUL"
+                  "RelatedSpokeIds": "URU GER ELIZ 10JUL",
+                  "MainPanelDisplayType": "Fixtures",
+                  "RelatedFixtureIds": "MATCH63"
               },
               {
                   "Id": "FIN",
                   "Text": "FINAL",
                   "Foreground": "Orange",
-                  "RelatedSpokeIds": "ESP NED JB01 11JUL"
+                  "RelatedSpokeIds": "ESP NED JB01 11JUL",
+                  "MainPanelDisplayType": "Fixtures",
+                  "RelatedFixtureIds": "MATCH64"
               }
             ]
             }
@@ -463,7 +477,7 @@ var wheelData = {
                   "Foreground": "Green",
                   "RelatedSpokeIds": "GPD 13JUN 18JUN 23JUN PRET ELIZ JB01",
                   "MainPanelDisplayType": "Fixtures",
-                  "RelatedFixtureIds": "MATCH08 MATCH21 MATCH40 MATCH51"
+                  "RelatedFixtureIds": "MATCH08 MATCH21 MATCH40 MATCH51 MATCH59 MATCH61 MATCH63"
               },
               {
                   "Id": "ALG",
@@ -479,7 +493,7 @@ var wheelData = {
                   "Foreground": "Green",
                   "RelatedSpokeIds": "GPB 12JUN 17JUN 22JUN JB02 JB01 POLO",
                   "MainPanelDisplayType": "Fixtures",
-                  "RelatedFixtureIds": "MATCH04 MATCH18 MATCH35 MATCH52"
+                  "RelatedFixtureIds": "MATCH04 MATCH18 MATCH35 MATCH52 MATCH59"
               },
               {
                   "Id": "AUS",
@@ -567,7 +581,7 @@ var wheelData = {
                   "Foreground": "Green",
                   "RelatedSpokeIds": "GPH 16JUN 21JUN 25JUN DURB JB02 PRET",
                   "MainPanelDisplayType": "Fixtures",
-                  "RelatedFixtureIds": "MATCH16 MATCH32 MATCH48 MATCH56"
+                  "RelatedFixtureIds": "MATCH16 MATCH32 MATCH48 MATCH56 MATCH60 MATCH62 MATCH64"
               },
               {
                   "Id": "USA",
@@ -607,7 +621,7 @@ var wheelData = {
                   "Foreground": "Green",
                   "RelatedSpokeIds": "GPE 14JUN 19JUN 24JUN JB01 DURB CAPE",
                   "MainPanelDisplayType": "Fixtures",
-                  "RelatedFixtureIds": "MATCH09 MATCH24 MATCH44 MATCH53 MATCH57"
+                  "RelatedFixtureIds": "MATCH09 MATCH24 MATCH44 MATCH53 MATCH57 MATCH61 MATCH64"
               },
               {
                   "Id": "HON",
@@ -1415,6 +1429,78 @@ var wheelData = {
             "MiddleLeftText": "02.07.2010",
             "MiddleRightText": "QUATERS",
             "CenterText": "4 - 2 (pen)"
+        },
+        {
+            "FixtureId": "MATCH59",
+            "LeftTopText": "MATCH 59",
+            "LeftBottomText": "ARGENTINA",
+            "LeftEmbeddedImageFileName": "ARGEmbedded.png",
+            "RightTopText": "CAPE TOWN",
+            "RightBottomText": "GERMANY",
+            "RightEmbeddedImageFileName": "GEREmbedded.png",
+            "MiddleLeftText": "03.07.2010",
+            "MiddleRightText": "QUATERS",
+            "CenterText": "0 - 4"
+        },
+        {
+            "FixtureId": "MATCH60",
+            "LeftTopText": "MATCH 60",
+            "LeftBottomText": "PARAGUAY",
+            "LeftEmbeddedImageFileName": "PAREmbedded.png",
+            "RightTopText": "CAPE TOWN",
+            "RightBottomText": "SPAIN",
+            "RightEmbeddedImageFileName": "ESPEmbedded.png",
+            "MiddleLeftText": "03.07.2010",
+            "MiddleRightText": "QUATERS",
+            "CenterText": "0 - 1"
+        },
+        {
+            "FixtureId": "MATCH61",
+            "LeftTopText": "MATCH 61",
+            "LeftBottomText": "URUGUAY",
+            "LeftEmbeddedImageFileName": "URUEmbedded.png",
+            "RightTopText": "CAPE TOWN",
+            "RightBottomText": "NETHERLANDS",
+            "RightEmbeddedImageFileName": "NEDEmbedded.png",
+            "MiddleLeftText": "06.07.2010",
+            "MiddleRightText": "SEMI-FINALS",
+            "CenterText": "2 - 3"
+        },
+        {
+            "FixtureId": "MATCH62",
+            "LeftTopText": "MATCH 62",
+            "LeftBottomText": "GERMANY",
+            "LeftEmbeddedImageFileName": "GEREmbedded.png",
+            "RightTopText": "CAPE TOWN",
+            "RightBottomText": "SPAIN",
+            "RightEmbeddedImageFileName": "ESPEmbedded.png",
+            "MiddleLeftText": "07.07.2010",
+            "MiddleRightText": "SEMI-FINALS",
+            "CenterText": "0 - 1"
+        },
+        {
+            "FixtureId": "MATCH63",
+            "LeftTopText": "MATCH 63",
+            "LeftBottomText": "GERMANY",
+            "LeftEmbeddedImageFileName": "GEREmbedded.png",
+            "RightTopText": "CAPE TOWN",
+            "RightBottomText": "URUGUAY",
+            "RightEmbeddedImageFileName": "URUEmbedded.png",
+            "MiddleLeftText": "10.07.2010",
+            "MiddleRightText": "PLAYOFF",
+            "CenterText": "3 - 2"
+        },
+        {
+            "FixtureId": "MATCH64",
+            "LeftTopText": "MATCH 64",
+            "LeftBottomText": "NETHERLANDS",
+            "LeftEmbeddedImageFileName": "NEDEmbedded.png",
+            "RightTopText": "CAPE TOWN",
+            "RightBottomText": "SPAIN",
+            "RightEmbeddedImageFileName": "ESPEmbedded.png",
+            "MiddleLeftText": "11.07.2010",
+            "MiddleRightText": "FINAL",
+            "CenterText": "0 - 1"
         }
       ]
         }

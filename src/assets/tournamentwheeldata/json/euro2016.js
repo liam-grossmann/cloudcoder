@@ -53,7 +53,7 @@ var wheelData = {
             "MainPanelDisplayText": {
                 "TextBlock": {
                     "Foreground": "Gold",
-                    "Text": "Here is some content for a rim segment"
+                    "Text": "World Cup 2010 Schedule"
                 }
             },
             "Spokes": {

@@ -49,7 +49,7 @@ export class TickerChartComponent implements OnInit {
 
         // Define the axes
         let xAxis = this.d3.axisBottom(xScale).ticks(7);
-        let yAxis = this.d3.axisRight(yScale).ticks(10);
+        let yAxis = this.d3.axisRight(yScale).ticks(10).tickFormat(this.d3.format('.2f'));
 
         // Initiate the line function
         let lineFunction = this.d3.line<any>()
@@ -169,8 +169,8 @@ export class TickerChartComponent implements OnInit {
 
         // Create a shared transition for anything we're animating 
         var t = svg.transition()
-            .delay(150)
-            .duration(1500)
+            .delay(250)
+            .duration(2500)
             .ease(this.d3.easeLinear)
             .on('end', function () {
                 // d3.select('line.guide')
