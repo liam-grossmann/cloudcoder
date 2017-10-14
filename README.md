@@ -54,6 +54,14 @@ npm WARN prefer global node-gyp@3.6.2 should be installed with -g
 
 ## Todo
 
+Notes: 
+I have copied the pluralsight D3 courses on the MAC. See
+Documents\Pluralsight\Downloaded
+This includes a tutorial on D3 maps and also Mike Bostocks example.
+
+I've also copied some examples.
+
+
 01) Make the charts render in real time - so that the user sees them drawing
     We've used a curtan which is working but a bit hacky. The background is a off.
     https://bl.ocks.org/phvaillant/53b90038b9c5ac5f6b817a4f63fbc2af
