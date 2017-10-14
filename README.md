@@ -77,8 +77,9 @@ npm WARN prefer global node-gyp@3.6.2 should be installed with -g
 
 05) Add Material Design example
 
-06) Add blog. Some good 
+06) Add blog. Some good ideas on pluralsight. Static content
 
 07) Add powershell script to deploy
     https://msdn.microsoft.com/en-us/magazine/dn948107.aspx
 
+08) Change dates to 2018.
