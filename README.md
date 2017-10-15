@@ -61,6 +61,13 @@ This includes a tutorial on D3 maps and also Mike Bostocks example.
 
 I've also copied some examples.
 
+There are some cool charts on the eu website for GDP etc.
+showing per country etc.
+you can get all the data.
+quite cool.
+There are lots of docs from the eu site on energy.
+https://ec.europa.eu/energy/en/topics/energy-strategy-and-energy-union/2020-energy-strategy
+
 
 01) Make the charts render in real time - so that the user sees them drawing
     We've used a curtan which is working but a bit hacky. The background is a off.
