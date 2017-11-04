@@ -18,6 +18,6 @@ export class DesktopComponent {
   }
 
   navigateToNextPortfolioItem() {
-    this.router.navigate(['/stockmarketprices']);
+    this.router.navigate(['/creditrisk']);
   }
 }

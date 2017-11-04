@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { Router } from '@angular/router';
-//import * as d3 from 'd3';
-import { D3Service, D3, Selection } from 'd3-ng2-service'; // <-- import the D3 Service, the type alias for the d3 variable and the Selection interface
+import { D3Service, D3, Selection } from 'd3-ng2-service';
+// <-- import the D3 Service, the type alias for the d3 variable and the Selection interface
 
 @Component({
   templateUrl: './starwars.component.html',
@@ -40,11 +40,13 @@ export class StarWarsComponent implements OnInit {
     $('#titlecontent').css('color', '#ff6');
 
     // Intro text will disappear
-    this.d3.select(introductionTextElement).transition().delay(introductionTextDisappears).style("opacity", "0");
+    this.d3.select(introductionTextElement).transition().delay(introductionTextDisappears).style('opacity', '0');
 
     // Image will get smaller and disappear.
-    this.d3.select(logoElement).transition().delay(logoTextAppears).style("opacity", "1");
-    this.d3.select(logoElement).transition().delay(logoTextFadeOut).duration(logoTextFadeOutDuration).style("font-size", "5px").style("opacity", "0");
+    this.d3.select(logoElement).transition().delay(logoTextAppears).style('opacity', '1');
+    this.d3.select(logoElement).transition().delay(logoTextFadeOut)
+      .duration(logoTextFadeOutDuration)
+      .style('font-size', '5px').style('opacity', '0');
   };
 
   navigateToPreviousPortfolioItem() {

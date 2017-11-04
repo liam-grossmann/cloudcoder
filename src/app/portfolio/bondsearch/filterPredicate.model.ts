@@ -8,7 +8,7 @@ export interface IFilterPredicate {
 export class FilterPredicate implements IFilterPredicate {
 
     constructor(public readonly propertyId: string,
-    public readonly propertyName: string,    
+    public readonly propertyName: string,
     public readonly operator: string,
     public readonly value: string) {
     }

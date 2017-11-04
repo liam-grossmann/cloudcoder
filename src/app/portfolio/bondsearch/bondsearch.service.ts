@@ -26,17 +26,21 @@ export class BondSearchService {
         listToReturn.push(new FilterProperty('bondYield', 'Yield', 'number'));
         return listToReturn;
     }
-    
+
     private sortBondListByIsin(listToSort: IBond[]): IBond[] {
         listToSort.sort((leftSide, rightSide): number => {
-            if (leftSide.isin < rightSide.isin) return -1;
-            if (leftSide.isin > rightSide.isin) return 1;
+            if (leftSide.isin < rightSide.isin) {
+                return -1;
+            }
+            if (leftSide.isin > rightSide.isin) {
+                return 1;
+            }
             return 0;
         });
         return listToSort;
     }
 
-    // JSON representation of all the bonds    
+    // JSON representation of all the bonds
     bondPrices = [
         {
             'IsinCode': 'GB0000513878',

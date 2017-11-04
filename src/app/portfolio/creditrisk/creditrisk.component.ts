@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import * as d3 from 'd3';
 
 @Component({
-  templateUrl: './stockmarketprices.component.html'
+  templateUrl: './creditrisk.component.html',
+  styleUrls: ['./creditrisk.component.css']
 })
-export class StockMarketPricesComponent {
+export class CreditRiskComponent {
 
   constructor(private router: Router) {
   }
 
   navigateToPreviousPortfolioItem() {
-    this.router.navigate(['/creditrisk']);
+    this.router.navigate(['/desktop']);
   }
 
   navigateToPortfolioList() {
@@ -19,6 +19,6 @@ export class StockMarketPricesComponent {
   }
 
   navigateToNextPortfolioItem() {
-    this.router.navigate(['/starwars']);
+    this.router.navigate(['/stockmarketprices']);
   }
 }

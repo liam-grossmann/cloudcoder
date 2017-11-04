@@ -3,14 +3,14 @@ import { NgModule, Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
-import { D3Service } from 'd3-ng2-service'; // <-- import statement
-
+import { D3Service } from 'd3-ng2-service';
 import { appRoutes } from './app.routes';
 
 /* Portfolios */
 import { AppComponent } from './app.component';
 import { PortfolioListComponent } from './portfolio/portfoliolist/portfoliolist.component';
 import { BondSearchComponent } from './portfolio/bondsearch/bondsearch.component';
+import { CreditRiskComponent } from './portfolio/creditrisk/creditrisk.component';
 import { DesktopComponent } from './portfolio/desktop/desktop.component';
 import { StarWarsComponent } from './portfolio/starwars/starwars.component';
 import { StockMarketPricesComponent } from './portfolio/stockmarketprices/stockmarketprices.component';
@@ -39,6 +39,7 @@ import { BondSearchService } from './portfolio/bondsearch/bondsearch.service';
     AppComponent,
     PortfolioListComponent,
     BondSearchComponent,
+    CreditRiskComponent,
     DesktopComponent,
     StarWarsComponent,
     StockMarketPricesComponent,

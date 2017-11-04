@@ -19,8 +19,8 @@ export class Bond implements IBond {
     constructor(data: any) {
         this.isin = data.IsinCode;
         this.name = data.InstrumentName;
-        this.cleanPrice = (parseInt((data.CleanPrice * 100).toString()) / 100);
-        this.dirtyPrice = (parseInt((data.DirtyPrice * 100).toString()) / 100);
+        this.cleanPrice = (parseInt((data.CleanPrice * 100).toString(), 10) / 100);
+        this.dirtyPrice = (parseInt((data.DirtyPrice * 100).toString(), 10) / 100);
         this.interest = data.AccruedInterest;
         this.bondYield = data.Yield;
     }

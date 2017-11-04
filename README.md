@@ -66,7 +66,7 @@ Please note that the web.config must be copied manually (if it is changed). The 
 <br><br>
 ## To Do
 01) Add flip for prices feed https://davidwalsh.name/css-flip
-02) Add Google analytics.
+
 03) https://desandro.github.io/3dtransforms/docs/card-flip.html
 
 Notes: 
@@ -109,10 +109,7 @@ https://ec.europa.eu/energy/en/topics/energy-strategy-and-energy-union/2020-ener
 
 06) Add blog. Some good ideas on pluralsight. Static content
 
-07) Add powershell script to deploy
-    https://msdn.microsoft.com/en-us/magazine/dn948107.aspx
 
-08) Change dates to 2018.
 
 
 

@@ -87,25 +87,25 @@ export class BondListComponent implements OnInit {
                 bond => bond[propertyToFilter].toUpperCase() !== filterPredicate.value.toUpperCase());
         }
 
-        // Number filters.        
+        // Number filters.
         if (filterPredicate.operator === '=') {
             listToFilter = listToFilter.filter(bond => bond[propertyToFilter] === Number(filterPredicate.value));
-        }  
+        }
         if (filterPredicate.operator === '!=') {
             listToFilter = listToFilter.filter(bond => bond[propertyToFilter] !== Number(filterPredicate.value));
-        }  
+        }
         if (filterPredicate.operator === '>') {
             listToFilter = listToFilter.filter(bond => bond[propertyToFilter] > Number(filterPredicate.value));
-        }  
+        }
         if (filterPredicate.operator === '<') {
             listToFilter = listToFilter.filter(bond => bond[propertyToFilter] < Number(filterPredicate.value));
-        } 
+        }
         if (filterPredicate.operator === '<=') {
             listToFilter = listToFilter.filter(bond => bond[propertyToFilter] <= Number(filterPredicate.value));
-        }  
+        }
         if (filterPredicate.operator === '>=') {
             listToFilter = listToFilter.filter(bond => bond[propertyToFilter] >= Number(filterPredicate.value));
-        }  
+        }
 
         return listToFilter;
     }

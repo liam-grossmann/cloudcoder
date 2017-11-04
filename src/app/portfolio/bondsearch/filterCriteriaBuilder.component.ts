@@ -9,9 +9,9 @@ import { IFilterProperty, FilterProperty } from './filterProperty.model';
 })
 export class FilterCriteriaBuilderComponent implements OnInit {
 
-    @Input()  filterProperties: IFilterProperty[] = [];    
-    @Output() filterPredicatesChanged = new EventEmitter();    
-    
+    @Input()  filterProperties: IFilterProperty[] = [];
+    @Output() filterPredicatesChanged = new EventEmitter();
+
     stringOperators: string[] = ['contains', 'equals', 'starts with', 'does not contain', 'does not equal'];
     numberOperators: string[] = ['=', '!=', '<', '>', '<=', '>='];
     operators: string[] = [];
@@ -30,7 +30,7 @@ export class FilterCriteriaBuilderComponent implements OnInit {
             this.operators = this.stringOperators.slice();
         } else {
             this.operators = this.numberOperators.slice();
-        }        
+        }
     }
 
     doAddFilterPredicate(): void {
