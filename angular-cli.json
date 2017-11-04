@@ -28,7 +28,10 @@
         "../src/assets/js/simple-text-rotator.js",
         "../src/assets/js/kinetic-v3.9.0.min.js",
         "../src/assets/js/tournamentwheel.js",
-        "../src/assets/tournamentwheeldata/json/wheeldata.js"
+        "../src/assets/tournamentwheeldata/json/wheeldata.js",
+        "../src/assets/js/d3.v3.min.js",
+        "../src/assets/js/topojson.v1.min.js",
+        "../src/assets/js/d3mapapp.js"
       ],
       "environmentSource": "environments/environment.ts",
 "environments": {
