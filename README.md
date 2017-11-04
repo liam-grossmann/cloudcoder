@@ -1,7 +1,6 @@
 # Cloud Coder
 Cloud Coder website
 
-
 Steps to run this project
 * Install the latest version of node js
 * NPM install the latest version of Angular CLI
@@ -18,13 +17,13 @@ The project was built using
 
 See the package.json for all other dependencies.
 
-This project was generated with [angular-cli](https://github.com/angular/angular-cli) version 1.0.0-beta.24.
-
 
 ## Build and Deploy
 ng build --target=production
-Then deploy to azure using ftp. See README_FTP.md
+powershell -File DeployCloudCoder.ps1
 
+When you run the powershell command you will be prompted to logon to Azure.
+If the powershell Deploy does not work, you can always do it manually using ftp. See README_FTP.md.
 
 
 ## To Do
