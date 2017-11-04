@@ -1,57 +1,73 @@
-# Cloud Coder
-Cloud Coder website
-
-Steps to run this project
-* Install the latest version of node js
-* NPM install the latest version of Angular CLI
-* Issue the following commands
- - npm install  (install all the required packages)
- - ng serve     (compile and run the web server)
- - Open http://localhost:4200/
+# Cloud Coder Website
 
 
-The project was built using
-* Angular 2
-* Angular cli
-* Material 2
+## Introduction
+Contains code for the cloud coder website. Built using
+
+| Component     | Version |
+|-------------- | ------- |
+| HTML5         |         |
+| Angular cli   | 1.0.0   |
+| Angular       | 4.4.3   |
+| Bootstrap     | 3.3.7   | 
+| jQuery        | 3.2.1   |
+| d3-ng-service | 1.17    | 
+| D3.js         | 1.0     |
 
 See the package.json for all other dependencies.
 
 
+
+<br><br>
+## Running the Project
+* Install the latest version of node js
+* NPM install the latest version of Angular CLI
+* Issue the following commands
+```
+c:\> npm install  (install all the required packages)
+c:\> ng serve     (compile and run the web server)
+```
+* Open http://localhost:4200/
+
+
+
+<br><br>
 ## Build and Deploy
-ng build --target=production
-powershell -File DeployCloudCoder.ps1
+Open a command line prompt and type the following commands
+```
+c:\> ng build --target=production
+c:\> powershell -File DeployCloudCoder.ps1
+```
 
-When you run the powershell command you will be prompted to logon to Azure.
-If the powershell Deploy does not work, you can always do it manually using ftp. See README_FTP.md.
+When you run the powershell command you will be prompted to logon to Azure. 
+
+NOTE: If the powershell Deploy does not work, you can always do it manually using ftp. See README_FTP.md.
 
 
+
+<br><br>
+## Shrinkwrap
+The project was shrinkwrapped using the following commands
+```
+c:\> npm prune
+c:\> npm shrinkwrap
+```
+
+
+
+<br><br>
+## Web.Config
+Please note that the web.config must be copied manually (if it is changed). The web.config fixes two issues
+* 404 for woff font files
+* redirects for angular components when user select F5.
+
+
+
+<br><br>
 ## To Do
 01) Add flip for prices feed https://davidwalsh.name/css-flip
 02) Add Google analytics.
 03) https://desandro.github.io/3dtransforms/docs/card-flip.html
-
-
-## Google Crawl
-Google crawl for liamgrossmann.com
-
-
-## Warnings
-Not too sure if this is an issue. Backstrech seems to be working
-npm WARN deprecated jquery.backstretch@2.1.15: Please move to the official package name `jquery-backstretch`
-
-The following warnings are not serious and only affect windows. On MAC, this should run cleanly:
-npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\chokidar\node_modules\fsevents):
-npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
-
-
-On the MAC we get
-npm WARN deprecated jquery.backstretch@2.1.15: Please move to the official package name `jquery-backstretch`
-npm WARN prefer global node-gyp@3.6.2 should be installed with -g
-
-
-
-## Todo
 
 Notes: 
 I have copied the pluralsight D3 courses on the MAC. See
@@ -97,3 +113,27 @@ https://ec.europa.eu/energy/en/topics/energy-strategy-and-energy-union/2020-ener
     https://msdn.microsoft.com/en-us/magazine/dn948107.aspx
 
 08) Change dates to 2018.
+
+
+
+<br><br>
+## Google Crawl
+Google crawl for liamgrossmann.com
+
+
+
+<br><br>
+## Warnings
+Not too sure if this is an issue. Backstrech seems to be working
+npm WARN deprecated jquery.backstretch@2.1.15: Please move to the official package name `jquery-backstretch`
+
+The following warnings are not serious and only affect windows. On MAC, this should run cleanly:
+npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@^1.0.0 (node_modules\chokidar\node_modules\fsevents):
+npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform for fsevents@1.1.2: wanted {"os":"darwin","arch":"any"} (current: {"os":"win32","arch":"x64"})
+
+On the MAC we get
+npm WARN deprecated jquery.backstretch@2.1.15: Please move to the official package name `jquery-backstretch`
+npm WARN prefer global node-gyp@3.6.2 should be installed with -g
+
+
+
