@@ -33,6 +33,7 @@ import { TechnologiesComponent } from './technologies/technologies.component';
 /* Data Services */
 import { WatchListService } from './portfolio/stockmarketprices/watchList.service';
 import { BondSearchService } from './portfolio/bondsearch/bondsearch.service';
+import { CoinMarkitComponent } from './portfolio/coinmarkit/coinmarkit.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { BondSearchService } from './portfolio/bondsearch/bondsearch.service';
     StarWarsComponent,
     StockMarketPricesComponent,
     TournamentWheelComponent,
+    CoinMarkitComponent,
     WatchListComponent,
     TickerDetailsComponent,
     TickerChartComponent,

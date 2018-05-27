@@ -8,6 +8,7 @@ import { DesktopComponent } from './portfolio/desktop/desktop.component';
 import { StarWarsComponent } from './portfolio/starwars/starwars.component';
 import { StockMarketPricesComponent } from './portfolio/stockmarketprices/stockmarketprices.component';
 import { TournamentWheelComponent } from './portfolio/tournamentwheel/tournamentwheel.component';
+import { CoinMarkitComponent } from './portfolio/coinmarkit/coinmarkit.component';
 
 const routes: Routes = [
     {
@@ -31,6 +32,9 @@ const routes: Routes = [
     }, {
         path: 'tournamentwheel',
         component: TournamentWheelComponent
+    }, {
+        path: 'coinmarkit',
+        component: CoinMarkitComponent
     }
 ];
 

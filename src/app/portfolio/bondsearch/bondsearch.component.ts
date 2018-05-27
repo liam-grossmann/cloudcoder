@@ -10,7 +10,7 @@ export class BondSearchComponent {
   }
 
  navigateToPreviousPortfolioItem() {
-    this.router.navigate(['/tournamentwheel']);
+    this.router.navigate(['/coinmarkit']);
   }
 
   navigateToPortfolioList() {

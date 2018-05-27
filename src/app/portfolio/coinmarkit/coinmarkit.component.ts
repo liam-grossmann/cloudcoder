@@ -1,17 +1,16 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import * as d3 from 'd3';
 
 @Component({
-  templateUrl: './stockmarketprices.component.html'
+  templateUrl: './coinmarkit.component.html'
 })
-export class StockMarketPricesComponent {
+export class CoinMarkitComponent {
 
   constructor(private router: Router) {
   }
 
   navigateToPreviousPortfolioItem() {
-    this.router.navigate(['/desktop']);
+    this.router.navigate(['/tournamentwheel']);
   }
 
   navigateToPortfolioList() {
@@ -19,6 +18,6 @@ export class StockMarketPricesComponent {
   }
 
   navigateToNextPortfolioItem() {
-    this.router.navigate(['/starwars']);
+    this.router.navigate(['/bondsearch']);
   }
 }
