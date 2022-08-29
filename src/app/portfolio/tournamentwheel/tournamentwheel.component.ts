@@ -26,7 +26,7 @@ export class TournamentWheelComponent implements OnInit {
   }
 
   navigateToNextPortfolioItem() {
-    this.router.navigate(['/coinmarkit']);
+    this.router.navigate(['/bondsearch']);
   }
 }
 
