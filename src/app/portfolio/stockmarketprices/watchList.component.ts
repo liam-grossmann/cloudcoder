@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { Subscription } from 'rxjs';
-import { TimerObservable } from 'rxjs/observable/TimerObservable';
+// import { Subscription } from 'rxjs';
+// import { TimerObservable } from 'rxjs/observable/TimerObservable';
 import { ITicker, Ticker } from './watchList';
 import { WatchListService } from './watchList.service';
 
@@ -23,10 +23,10 @@ export class WatchListComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.watchList = this._watchListService.getWatchList();
         this.selectedTicker = this.watchList[0];
-        let timer = TimerObservable.create(2000, 1000);
-        this.subscription = timer.subscribe(t => {
-            this.onTickerTape();
-        });
+   //     let timer = TimerObservable.create(2000, 1000);
+     //   this.subscription = timer.subscribe(t => {
+       //     this.onTickerTape();
+        // });
     }
 
     ngOnDestroy() {
