@@ -36,7 +36,7 @@
     "@types/jasmine": "2.5.38",
     "@types/jquery": "^2.0.34",
     "@types/jquery-backstretch": "^2.0.14",
-    "@types/node": "^6.0.42",
+    "@types/node": "^7.0.7",
     "codelyzer": "~2.0.0-beta.1",
     "ts-helpers": "^1.1.2",
     "ts-node": "1.2.1",
